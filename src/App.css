@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	font-family: monospace;
+	color: hsl(0, 0%, 80%);
+	background-color: hsl(0, 0%, 20%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+	position: fixed;
+	top: 0;
+	background-color: hsl(0, 50%, 40%);
+	height: 8vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+header > h2 {
+	padding-left: 2vh;
+	margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 0.75rem;
+	height: 30px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.hbline-hover {
+	background-color:hsl(0, 0%, 70%)!important;
+}
+
+.lineOne {
+	height: 6px;
+	background-color:hsl(0, 0%, 80%);
+}
+
+.lineTwo {
+	height: 6px;
+	background-color:hsl(0, 0%, 80%);
+}
+
+.lineThree {
+	height: 6px;
+	background-color:hsl(0, 0%, 80%);
+}
+
+nav {
+	margin-top: 8vh;
+	padding: 2rem;
+	list-style: none;
+}
+
+.navItem {
+	font-weight: 700;
+	cursor: pointer;
+	margin-bottom: 2vh;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+	margin-left: 2vh;
+	margin-right: 2vh;
+	margin-bottom: 2vh;
+}
+
+.homeArticle {
 }
