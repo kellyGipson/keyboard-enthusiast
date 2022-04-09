@@ -3,22 +3,21 @@ import './App.css';
 
 function App() {
 
-	const [navOpen, setNavOpen] = useState(false);
+	const [navOpen, setNavOpen] = useState("");
 
 	const [HamburgerHoverActive, setHamburgerHoverActive] = useState(false);
 	const [hamburgerHoverClass, setHamburgerHoverClass] = useState("");
 	function setHBLineHover() {
 		setHamburgerHoverActive(!HamburgerHoverActive);
-		setHamburgerHoverClass((!HamburgerHoverActive) ? "hbline-hover" : "");
-		console.log(hamburgerHoverClass);
+		setHamburgerHoverClass((!HamburgerHoverActive) ? "hbline-hover " : "");
 	}
 
 	function toggleNav() {
-		setNavOpen(!navOpen);
+		setNavOpen((!navOpen) ? " hasNavOpen" : "");
 	}
 
 	function handleClickNav(e: React.MouseEvent<HTMLSpanElement, MouseEvent>) {
-		setNavOpen(false);
+		toggleNav();
 		const searchParams = ["home", "why", "keytypes", "switchtypes"];
 		let result: string = "";
 		for(let navItem of searchParams) {
@@ -27,27 +26,27 @@ function App() {
 				break;}
 		}
 		//TODO change left offset to selected nav item
-		let selectedNavItem: number = 0;
+		let selectedNavItem: Element;
 		switch(result) {
 			case "home": 
 				console.log(result); 
-				selectedNavItem = document.getElementsByClassName("homeArticle")[0].scrollTop;
-				console.log(selectedNavItem);
+				selectedNavItem = document.getElementsByClassName("homeArticle")[0];
+        selectedNavItem.scrollIntoView({behavior: "smooth"});
 				break;
 			case "why": 
 				console.log(result); 
-				selectedNavItem = document.getElementsByClassName("whyKeyboards")[0].scrollTop;
-				console.log(selectedNavItem);
+				selectedNavItem = document.getElementsByClassName("whyKeyboards")[0];
+				selectedNavItem.scrollIntoView();
 				break;
 			case "keytypes": 
 				console.log(result); 
-				selectedNavItem = document.getElementsByClassName("keyboards")[0].scrollTop;
-				console.log(selectedNavItem);
+				selectedNavItem = document.getElementsByClassName("keyboards")[0];
+        selectedNavItem.scrollIntoView();
 				break;
 			case "switchtypes": 
 				console.log(result); 
-				selectedNavItem = document.getElementsByClassName("switches")[0].scrollTop;
-				console.log(selectedNavItem);
+				selectedNavItem = document.getElementsByClassName("switches")[0];
+				selectedNavItem.scrollIntoView();
 				break;
 		}
 	}
@@ -56,18 +55,22 @@ function App() {
     <div className="App">
 			<header className='header'>
 				<h2>Keyboards as a hobby</h2>
-				<span className="hamburger" onMouseEnter={() => setHBLineHover()} onMouseLeave={() => setHBLineHover()} onClick={(e) => toggleNav()}>
-					<div className={`${hamburgerHoverClass} lineOne`  }></div>
-					<div className={`${hamburgerHoverClass} lineTwo`  }></div>
-					<div className={`${hamburgerHoverClass} lineThree`}></div>
+				<span className="hamburger" 
+          onMouseEnter={() => setHBLineHover()} 
+          onMouseLeave={() => setHBLineHover()} 
+          onClick={(e) => toggleNav()}
+        >
+					<div className={`${hamburgerHoverClass}lineOne`  }></div>
+					<div className={`${hamburgerHoverClass}lineTwo`  }></div>
+					<div className={`${hamburgerHoverClass}lineThree`}></div>
 				</span>
 			</header>
-			{navOpen && <nav className='nav'>
+			<nav className={`nav${navOpen}`}>
 				<li className='home navItem'        onClick={(e) => handleClickNav(e)}>Home</li>
 				<li className='why navItem'         onClick={(e) => handleClickNav(e)}>Why Keyboards?</li>
 				<li className='keytypes navItem'    onClick={(e) => handleClickNav(e)}>Types of Keyboards</li>
 				<li className='switchtypes navItem' onClick={(e) => handleClickNav(e)}>Types of Switches</li>
-			</nav>}
+			</nav>
 			<section className='content'>
 				<article className="homeArticle">
 					As a keyboard enthusiast, I get a particular brain itch when a keyboard has a certain sound and feel that most people don't really care much about. I want to share a bit about my hobby and perhaps you might be inclined to look further into custom keyboards yourself.

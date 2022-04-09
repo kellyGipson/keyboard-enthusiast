@@ -1,5 +1,10 @@
+
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  --main-color: hsl(0, 0%, 20%);
+  --light-color: hsl(0, 0%, 80%);
+  --light-color-hover: hsl(0, 0%, 70%);
+  --header-height: 8vh;
 }
 
 html {
@@ -14,18 +19,19 @@ body {
 	background-color: hsl(0, 0%, 20%);
 }
 
-header {
+.header {
 	position: fixed;
 	top: 0;
-	background-color: hsl(0, 50%, 40%);
-	height: 8vh;
+	background-color: hsl(2, 60%, 50%);
+	height: var(--header-height);
 	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+  z-index: 500;
 }
 
-header > h2 {
+.header > h2 {
 	padding-left: 2vh;
 	margin: 0;
 }
@@ -38,6 +44,7 @@ header > h2 {
 	height: 30px;
 	width: 50px;
 	cursor: pointer;
+  z-index: 500;
 }
 
 .hbline-hover {
@@ -46,39 +53,48 @@ header > h2 {
 
 .lineOne {
 	height: 6px;
-	background-color:hsl(0, 0%, 80%);
+	background-color: var(--light-color);
 }
 
 .lineTwo {
 	height: 6px;
-	background-color:hsl(0, 0%, 80%);
+	background-color: var(--light-color);
 }
 
 .lineThree {
 	height: 6px;
-	background-color:hsl(0, 0%, 80%);
+	background-color: var(--light-color);
 }
 
-nav {
-	margin-top: 8vh;
+.nav.hasNavOpen {
+  opacity: 1;
+  top: 0;
+}
+
+.nav {
+  position: fixed;
 	padding: 2rem;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
 	list-style: none;
+  opacity: 0;
+  transition: all 0.25s linear;
 }
 
 .navItem {
 	font-weight: 700;
 	cursor: pointer;
 	margin-bottom: 2vh;
+  width: fit-content;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
-	margin-top: 10vh;
+	margin-top: 2vh;
 	margin-left: 2vh;
 	margin-right: 2vh;
 	margin-bottom: 2vh;
-}
-
-.homeArticle {
 }

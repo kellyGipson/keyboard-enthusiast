@@ -1,5 +1,5 @@
 {
-  "name": "one-page-site",
+  "name": "keyboard-as-a-hobby",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "@types/react-dom": "^17.0.14",
     "react": "^18.1.0-next-af730436c-20220405",
     "react-dom": "^18.1.0-next-af730436c-20220405",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "typescript": "^4.6.3",
     "web-vitals": "^2.1.4"
   },
