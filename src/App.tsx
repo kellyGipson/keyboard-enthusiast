@@ -72,11 +72,11 @@ function App() {
 			<section className='content'>
 				<article className="homeArticle">
           <div className="imageShade"></div>
-          <img className='contentImg' src={require("./assets/keyboard-image-1.webp")} alt="Custom Keyboard" />
+          <img className='contentImg' src={require("./assets/custom-keyboard-1.webp")} alt="Custom Keyboard" />
           <p className='contentText'>As a keyboard enthusiast, I get a particular brain itch when a keyboard has a certain sound and feel that most people don't really care much about. I want to share a bit about my hobby and perhaps you might be inclined to look further into custom keyboards yourself.</p>
 				</article>
 				<article className='articleContainer whyKeyboards'>
-          <img className='contentImg' src={require("./assets/custom_resized_2adc9c06-adc0-4393-b62e-da7b14d60bba.webp")} alt="Another Custom Keyboard" />
+          <img className='contentImg' src={require("./assets/custom-keyboard-2.webp")} alt="Another Custom Keyboard" />
 					<h1 className='contentText'>Why Keyboards?</h1>
           <p className='contentText'>When you've spent 10+ hours on a custom keyboard, the most satisfying part of the entire process is typing on it for the first time. There's something about knowing that you did all of it yourself that makes it all the more worth the tedious hours spent lubricating every last switch, and fine tuning it to your liking. Just like any hobby, keyboards aren't worth it for everyone but as someone who is constantly using a keyboard like myself, a custom keyboard with a tailored look, feel and sound is truly magical.</p>
 				</article>
@@ -85,7 +85,7 @@ function App() {
 					<h1 className='contentText'>Types of Keyboards</h1>
 					<h4 className='contentText'>Pre-built keyboards</h4>
           <p className='contentText'>Pre-built keyboards come in many shapes, sizes, and key layouts. The main takeaway is that a company has created the keyboard, and the sound and the feel are predetermined. There are things you can do to alter the way pre-built keyboards sound and feel, but eventually you will come to a halt when it comes down to modifications. Most of the time, this comes down to build quality amongst other variences.</p>
-          <img className='contentImg' src={require("./assets/Godspeed75_white_infinikey-bow.webp")} alt="Custom Keyboard" />
+          <img className='contentImg' src={require("./assets/custom-keyboard-3.webp")} alt="Custom Keyboard" />
 					<h4 className='contentText'>Custom Keyboards</h4>
           <p className='contentText'>Where the real fun comes in, is when you build a keyboard from scratch(with pre-made parts of course). Some crazy people engineer their own keyboards but that is outside of the scope of what I'm going to talk about. Custom keyboards are exactly what you make of them. They take the longest time to build, but when you're finished, the keyboard that you build is exactly as you want it. </p>
 				</article>
