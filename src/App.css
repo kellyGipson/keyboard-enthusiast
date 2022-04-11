@@ -81,6 +81,11 @@ body {
 	background-color: var(--light-color);
 }
 
+@keyframes downArrowAnimation {
+  from {bottom: 0;}
+  to   {bottom: 6px;}
+}
+
 .downArrowContainer {
   position: absolute;
   display: flex;
@@ -89,11 +94,9 @@ body {
   align-items: center;
   height: 20vh;
   width: 100vw;
-  bottom: 0;
   z-index: 400;
+  animation: downArrowAnimation 0.5s linear infinite alternate;
 }
-
-.downArrowContainer > 
 
 .downArrow {
   height: 40%;
