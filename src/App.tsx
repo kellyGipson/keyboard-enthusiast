@@ -19,7 +19,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScrollNav)
     }
-  }, []);
+  });
 
 	const [navOpen, setNavOpen] = useState("");
 
